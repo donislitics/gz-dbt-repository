@@ -1,3 +1,5 @@
+ {{ config(materialized=...) }}
+
 select
 date_date
 , count(orders_id) as total_nb_transactions
