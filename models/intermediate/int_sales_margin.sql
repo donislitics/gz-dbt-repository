@@ -1,5 +1,3 @@
-{{ config(materialized='table') }}
-
 select 
 stg_raw__sales.date_date
 , stg_raw__sales.orders_id

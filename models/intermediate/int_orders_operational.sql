@@ -1,5 +1,3 @@
-{{ config(materialized='table') }}
-
 select 
 int_sales_margin.orders_id
 , int_sales_margin.date_date
