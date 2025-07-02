@@ -1,6 +1,7 @@
 select 
 int_sales_margin.orders_id
 , int_sales_margin.date_date
+, ROUND(SUM(int_sales_margin.margin), 2) as margin
 , ROUND(SUM((int_sales_margin.margin + stg_raw__ship.shipping_fee) - (stg_raw__ship.shipment_cost + stg_raw__ship.logcost)), 2) as operational_margin
 , ROUND(SUM(int_sales_margin.quantity), 2) as quantity
 , ROUND(SUM(int_sales_margin.purchase_price), 2) as purchase_price

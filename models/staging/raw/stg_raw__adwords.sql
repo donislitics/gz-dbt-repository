@@ -1,13 +1,10 @@
-with 
-
-source as (
+with source as (
 
     select * from {{ source('raw', 'adwords') }}
 
 ),
 
 renamed as (
-
     select
         date_date
         , paid_source
@@ -17,7 +14,6 @@ renamed as (
         , impression
         , click
     from source
-
 )
 
 select * from renamed
