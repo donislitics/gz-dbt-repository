@@ -29,3 +29,40 @@ sources:
             description: primary key of the table
             tests:
               - unique
+
+      - name: adwords
+        identifier: raw_gz_adwords #Quel est le nom exacte de la table dans BQ
+        description: adwords campaign metrics
+        columns:
+          - name: "(date_date|| '-' || paid_source || '-' || campaign_key)"
+            description: primary key of the table
+            tests:
+              - unique
+              - not_null
+      - name: bing
+        identifier: raw_gz_bing #Quel est le nom exacte de la table dans BQ
+        description: bing campaign metrics
+        columns:
+          - name: "(date_date|| '-' || paid_source || '-' || campaign_key)"
+            description: primary key of the table
+            tests:
+              - unique
+              - not_null
+      - name: criteo
+        identifier: raw_gz_criteo #Quel est le nom exacte de la table dans BQ
+        description: criteo campaign metrics
+        columns:
+          - name: "(date_date|| '-' || paid_source || '-' || campaign_key)"
+            description: primary key of the table
+            tests:
+              - unique
+              - not_null
+      - name: facebook
+        identifier: raw_gz_facebook #Quel est le nom exacte de la table dans BQ
+        description: facebook campaign metrics
+        columns:
+          - name: "(date_date|| '-' || paid_source || '-' || campaign_key)"
+            description: primary key of the table
+            tests:
+              - unique
+              - not_null
